@@ -1,0 +1,56 @@
+query getInitiationResponse {
+  getInitiationResponse(
+    Sequence: 1,
+    Mobile: "233542751610",
+    SessionId: "aeb67d5e6e6b48409ad19a43eaa62b91",
+    ServiceCode: "711*78",
+    Operator: "MTN",
+    Message: "*711*78#",
+    ClientState: false,
+    Type: "Initiation",
+  )
+}
+
+mutation toggleChecked {
+  toggleChecked(id: "jgyStfdmN4b58JCiR") {
+    _id
+    text
+    createdAt
+    checked
+  }
+}
+
+mutation addTask {
+  addTask(text: "Meet Aaron") {
+    _id
+    text
+    createdAt
+    checked
+  }
+}
+
+mutation deleteTask {
+  deleteTask(id: "NYoWvGdQTnxjS9nwN")
+}
+
+query getTask {
+  getOneTask(id: "hNGEaWWreGF5ufEsc") {
+    _id
+    text
+    createdAt
+    checked
+  }
+}
+
+query getTasks {
+  getAllTasks {
+    _id
+    text
+    createdAt
+    checked
+  }
+}
+
+query getIncompleteCount {
+  getIncompleteTasksCount
+}
